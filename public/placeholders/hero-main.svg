@@ -1,0 +1,83 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#F9FAFB"/>
+  
+  <defs>
+    <!-- Soft Ambient Shadow Filter (Simulating Clay Lighting) -->
+    <filter id="clay-shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="15"/>
+      <feOffset dx="0" dy="20" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.15"/> <!-- Low opacity shadow -->
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main Composition Group (Centered) -->
+  <g transform="translate(960, 540)">
+    
+    <!-- 1. BASE PLATFORM (The 'Screen') -->
+    <g filter="url(#clay-shadow)">
+      <!-- Right Face -->
+      <path d="M0 200 L400 0 L400 40 L0 240 Z" fill="#D1D5DB"/> <!-- Mid Grey -->
+      <!-- Left Face -->
+      <path d="M0 200 L-400 0 L-400 40 L0 240 Z" fill="#E5E7EB"/> <!-- Light Grey -->
+      <!-- Top Face -->
+      <path d="M0 200 L-400 0 L0 -200 L400 0 Z" fill="#FFFFFF"/> <!-- White -->
+    </g>
+
+    <!-- 2. SIDEBAR BLOCK (Left) -->
+    <g filter="url(#clay-shadow)" transform="translate(-280, -20)">
+      <!-- Right Face -->
+      <path d="M0 20 L80 -20 L80 0 L0 40 Z" fill="#9CA3AF"/>
+      <!-- Left Face -->
+      <path d="M0 20 L-80 -20 L-80 0 L0 40 Z" fill="#D1D5DB"/>
+      <!-- Top Face -->
+      <path d="M0 20 L-80 -20 L60 -90 L140 -50 Z" fill="#F3F4F6"/>
+    </g>
+
+    <!-- 3. HEADER BLOCK (Top) -->
+    <g filter="url(#clay-shadow)" transform="translate(60, -120)">
+      <!-- Right Face -->
+      <path d="M0 20 L280 -120 L280 -100 L0 40 Z" fill="#D1D5DB"/>
+      <!-- Left Face -->
+      <path d="M0 20 L-40 0 L-40 20 L0 40 Z" fill="#E5E7EB"/>
+      <!-- Top Face -->
+      <path d="M0 20 L-40 0 L240 -140 L280 -120 Z" fill="#FFFFFF"/>
+    </g>
+
+    <!-- 4. FLOATING CARDS (The Content) -->
+    
+    <!-- Card A: Chart Widget (Center Right) -->
+    <g filter="url(#clay-shadow)" transform="translate(150, 60)">
+       <!-- Base Block -->
+       <path d="M0 20 L150 -55 L150 -35 L0 40 Z" fill="#D1D5DB"/>
+       <path d="M0 20 L-100 -30 L-100 -10 L0 40 Z" fill="#E5E7EB"/>
+       <path d="M0 20 L-100 -30 L50 -105 L150 -55 Z" fill="#FFFFFF"/>
+       
+       <!-- Abstract Chart Bar 1 -->
+       <path d="M-40 -10 L-20 -20 L-20 -50 L-40 -40 Z" fill="#9CA3AF" transform="translate(0, -10)"/>
+       <path d="M-40 -50 L-20 -60 L0 -50 L-20 -40 Z" fill="#E5E7EB" transform="translate(0, -10)"/>
+       
+       <!-- Abstract Chart Bar 2 -->
+       <path d="M0 -30 L20 -40 L20 -80 L0 -70 Z" fill="#9CA3AF" transform="translate(0, -10)"/>
+       <path d="M0 -70 L20 -80 L40 -70 L20 -60 Z" fill="#E5E7EB" transform="translate(0, -10)"/>
+    </g>
+
+    <!-- Card B: List Widget (Center Left) -->
+    <g filter="url(#clay-shadow)" transform="translate(-100, 100)">
+       <path d="M0 20 L100 -30 L100 -10 L0 40 Z" fill="#D1D5DB"/>
+       <path d="M0 20 L-100 -30 L-100 -10 L0 40 Z" fill="#E5E7EB"/>
+       <path d="M0 20 L-100 -30 L0 -80 L100 -30 Z" fill="#FFFFFF"/>
+       
+       <!-- Lines -->
+       <path d="M-50 -10 L50 -60" stroke="#E5E7EB" stroke-width="8" stroke-linecap="round"/>
+       <path d="M-40 5 L40 -35" stroke="#E5E7EB" stroke-width="8" stroke-linecap="round"/>
+    </g>
+
+  </g>
+</svg>
