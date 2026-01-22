@@ -12,14 +12,6 @@ export default function Footer() {
                     {/* Column 1: Brand & Personal */}
                     <div className="space-y-6">
                         <div className="flex items-center gap-3">
-                            <div className="relative h-16 w-24">
-                                <Image
-                                    src="/images/logo.png"
-                                    alt="Logo Van Voorst Schilders"
-                                    fill
-                                    className="object-contain object-left"
-                                />
-                            </div>
                             <div className="flex items-center gap-2">
                                 <span className="text-lg font-bold text-white font-display">Van Voorst</span>
                                 <span className="text-lg font-light text-primary-200 font-display">Schilders</span>
