@@ -23,21 +23,21 @@ export default function Navbar() {
         <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-primary-100 h-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
                 <div className="flex-shrink-0 h-full flex items-center">
-                    <Link href="/" className="flex items-center gap-3 h-full">
-                        <div className="relative h-28 w-44 flex items-center justify-end">
+                    <Link href="/" className="flex flex-col sm:flex-row items-center sm:items-center gap-0 sm:gap-3 h-full justify-center sm:justify-start pt-1 sm:pt-0">
+                        <div className="relative h-10 w-32 sm:h-28 sm:w-44 flex items-center justify-center sm:justify-end">
                             <Image
                                 src="/images/logo.png"
                                 alt="Logo Van Voorst Schilders"
                                 fill
-                                className="object-contain object-right scale-125 translate-x-[25px] translate-y-[15px]"
+                                className="object-contain object-center sm:object-right sm:scale-125 sm:translate-x-[25px] sm:translate-y-[15px]"
                                 priority
                             />
                         </div>
-                        <div className="flex items-center gap-2">
-                            <span className="text-2xl sm:text-3xl font-bold text-primary-950 font-display tracking-tight">
+                        <div className="flex items-center gap-1 sm:gap-2 -mt-1 sm:mt-0">
+                            <span className="text-sm sm:text-2xl md:text-3xl font-bold text-primary-950 font-display tracking-tight">
                                 Van Voorst
                             </span>
-                            <span className="text-2xl sm:text-3xl font-light text-primary-700 font-display tracking-tight">
+                            <span className="text-sm sm:text-2xl md:text-3xl font-light text-primary-700 font-display tracking-tight">
                                 Schilders
                             </span>
                         </div>
