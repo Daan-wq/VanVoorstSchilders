@@ -23,7 +23,16 @@ export default function Navbar() {
         <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-primary-100 h-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
                 <div className="flex-shrink-0 h-full flex items-center">
-                    <Link href="/" className="flex items-center h-full">
+                    <Link href="/" className="flex items-center h-full gap-3">
+                        <div className="hidden sm:flex relative h-28 w-44 items-center justify-end">
+                            <Image
+                                src="/images/logo.png"
+                                alt="Logo Van Voorst Schilders"
+                                fill
+                                className="object-contain object-right scale-125 translate-x-[25px] translate-y-[15px]"
+                                priority
+                            />
+                        </div>
                         <div className="flex items-center gap-2">
                             <span className="text-2xl sm:text-3xl font-bold text-primary-950 font-display tracking-tight">
                                 Van Voorst
